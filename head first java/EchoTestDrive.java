@@ -1,7 +1,7 @@
 public class EchoTestDrive {
     public static void main (String[] args) {
         Echo e1 = new Echo();
-        Echo e2 = new Echo();
+        Echo e2 = new Echo(); // Echo e2 = e1; to get 24 as count result.
 
         int x = 0;
 
