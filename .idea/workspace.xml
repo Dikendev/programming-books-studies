@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 1 PoolPuzzleOne">
-      <change afterPath="$PROJECT_DIR$/head first java/guessingGame/GameLauncher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/head first java/guessingGame/GuessGame.java" afterDir="false" />
+    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 2 Guessing Game">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676307078573</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="chapter 2 Guessing Game">
+      <created>1676318164163</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676318164163</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,6 +110,7 @@
     <MESSAGE value="added readme" />
     <MESSAGE value="chapter 1 Shuffle1" />
     <MESSAGE value="chapter 1 PoolPuzzleOne" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter 1 PoolPuzzleOne" />
+    <MESSAGE value="chapter 2 Guessing Game" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter 2 Guessing Game" />
   </component>
 </project>
