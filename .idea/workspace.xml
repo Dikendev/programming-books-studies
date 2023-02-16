@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 3 BooksTestDrive, Hobbits (be the compiler)">
+    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 3 TestArrays">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676515887074</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="chapter 3 TestArrays">
+      <created>1676529388852</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676529388852</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,7 +158,8 @@
     <MESSAGE value="chapter 2 EchoTestDrive added bonus solution" />
     <MESSAGE value="chapter 3 Dog, creating objects in a array" />
     <MESSAGE value="chapter 3 BooksTestDrive, Hobbits (be the compiler)" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter 3 BooksTestDrive, Hobbits (be the compiler)" />
+    <MESSAGE value="chapter 3 TestArrays" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter 3 TestArrays" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
