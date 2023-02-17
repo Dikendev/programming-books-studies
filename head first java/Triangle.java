@@ -30,4 +30,5 @@ public class Triangle {
     void  setArea() {
         area = (height * length) /2;
     }
+
 }

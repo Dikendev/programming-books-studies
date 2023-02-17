@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 3 Triangle pool puzzle">
-      <change afterPath="$PROJECT_DIR$/head first java/DogTestDrive.java" afterDir="false" />
+    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 4 DogTestDrive code improved.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/head first java/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/head first java/Triangle.java" afterDir="false" />
     </list>
@@ -141,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676576464114</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="chapter 4 DogTestDrive code improved.">
+      <created>1676602404542</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676602404542</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,7 +175,8 @@
     <MESSAGE value="chapter 3 BooksTestDrive, Hobbits (be the compiler)" />
     <MESSAGE value="chapter 3 TestArrays" />
     <MESSAGE value="chapter 3 Triangle pool puzzle" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter 3 Triangle pool puzzle" />
+    <MESSAGE value="chapter 4 DogTestDrive code improved." />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter 4 DogTestDrive code improved." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
