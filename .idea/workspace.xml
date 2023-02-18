@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 4 DogTestDrive code improved.">
+    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 4 GoodDog encapsulation OOP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/head first java/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/head first java/Triangle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +146,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676602404542</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="chapter 3 Triangle pool puzzle fixed indentation.">
+      <created>1676602550790</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676602550790</updated>
+    </task>
+    <task id="LOCAL-00016" summary="chapter 4 GoodDog encapsulation OOP">
+      <created>1676686807442</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1676686807442</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,7 +189,9 @@
     <MESSAGE value="chapter 3 TestArrays" />
     <MESSAGE value="chapter 3 Triangle pool puzzle" />
     <MESSAGE value="chapter 4 DogTestDrive code improved." />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter 4 DogTestDrive code improved." />
+    <MESSAGE value="chapter 3 Triangle pool puzzle fixed indentation." />
+    <MESSAGE value="chapter 4 GoodDog encapsulation OOP" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter 4 GoodDog encapsulation OOP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
