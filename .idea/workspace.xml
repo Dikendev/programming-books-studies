@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 4 GoodDog encapsulation OOP">
+    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 4 XCopy / ClockTestDrive (Be the compiler)">
+      <change afterPath="$PROJECT_DIR$/head first java/CalcArea.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676686807442</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="chapter 4 XCopy / ClockTestDrive (Be the compiler)">
+      <created>1676689086544</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1676689086544</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,7 +199,8 @@
     <MESSAGE value="chapter 4 DogTestDrive code improved." />
     <MESSAGE value="chapter 3 Triangle pool puzzle fixed indentation." />
     <MESSAGE value="chapter 4 GoodDog encapsulation OOP" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter 4 GoodDog encapsulation OOP" />
+    <MESSAGE value="chapter 4 XCopy / ClockTestDrive (Be the compiler)" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter 4 XCopy / ClockTestDrive (Be the compiler)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
