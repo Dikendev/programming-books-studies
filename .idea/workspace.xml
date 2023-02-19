@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 4 XCopy / ClockTestDrive (Be the compiler)">
-      <change afterPath="$PROJECT_DIR$/head first java/CalcArea.java" afterDir="false" />
+    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 4 CalcArea (Sharpen your pencil)">
+      <change afterPath="$PROJECT_DIR$/head first java/Mix4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +19,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -168,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676689086544</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="chapter 4 CalcArea (Sharpen your pencil)">
+      <created>1676838743589</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1676838743589</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,7 +210,8 @@
     <MESSAGE value="chapter 3 Triangle pool puzzle fixed indentation." />
     <MESSAGE value="chapter 4 GoodDog encapsulation OOP" />
     <MESSAGE value="chapter 4 XCopy / ClockTestDrive (Be the compiler)" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter 4 XCopy / ClockTestDrive (Be the compiler)" />
+    <MESSAGE value="chapter 4 CalcArea (Sharpen your pencil)" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter 4 CalcArea (Sharpen your pencil)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
