@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 5 MultiFor">
+    <list default="true" id="06be71af-ab1a-49d7-800c-92eb79ece7d0" name="Changes" comment="chapter 5 MixFor5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/head first java/SimpleDotComGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/head first java/DotCom.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676997246671</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="chapter 5 MixFor5">
+      <created>1677003844429</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1677003844429</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,7 +258,8 @@
     <MESSAGE value="chapter 5 SimpleDotComGame" />
     <MESSAGE value="chapter 5 Output" />
     <MESSAGE value="chapter 5 MultiFor" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter 5 MultiFor" />
+    <MESSAGE value="chapter 5 MixFor5" />
+    <option name="LAST_COMMIT_MESSAGE" value="chapter 5 MixFor5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
