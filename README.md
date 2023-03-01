@@ -1,5 +1,5 @@
 # java-exercises
-Exercises with some java books
+Estudos usando livros de java, e projetos propostos em cada livro.
 
 
 ## Head First Java
