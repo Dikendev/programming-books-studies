@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Taco Cloud</title>
+</head>
+<body>
+  <form method="POST" th:action="@{/orders}" th:object="${tacoOrder}">
+    <h1>Order your taco creations!</h1>
+      <img th:src="@{/TacoCloud.png}" width="300"/>
+
+      <h3>Your tacos in this order:</h3>
+      <a th:href="@{/design}" id="another">Design another taco</a><br/>
+      <ul>
+          <li th:each="taco : ${tacoOrder.tacos}">
+              <span th:text="${taco.name}">taco name</span>
+          </li>
+      </ul>
+
+      <h3>Deliver my taco masterpieces to...</h3>
+      <label for="deliveryName">Name: </label>
+      <input type="text" th:field="*{deliveryName}"/>
+      <br/>
+
+      <label for="deliveryStreet">Street address: </label>
+      <input type="text" th:field="*{deliveryStreet}"/>
+      <br/>
+
+      <label for="deliveryCity">City: </label>
+      <input type="text" th:field="*{deliveryCity}"/>
+      <br/>
+
+      <label for="deliveryState">State: </label>
+      <input type="text" th:field="*{deliveryState}"/>
+      <br/>
+
+      <label for="deliveryZip">Zip code: </label>
+      <input type="text" th:field="*{deliveryZip}"/>
+      <br/>
+
+      <h3>Here's how i''l pay...</h3>
+      <label for="ccNumber">Credit Card #: </label>
+      <input type="text" th:field="*{ccNumber}"/>
+      <br/>
+
+      <label for="ccExpiration">Expiration: </label>
+      <input type="text" th:field="*{ccExpiration}"/>
+      <br/>
+
+      <label for="ccCVV">CVV: </label>
+      <input type="text" th:field="*{ccCVV}"/>
+      <br/>
+
+      <input type="submit" value="Submit Order"/>
+  </form>
+</body>
+</html>
