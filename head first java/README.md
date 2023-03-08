@@ -1,11 +1,11 @@
 # JavaExercises | Head First Java
+<br/>
 <hr>
-My exercises from Head First Java 2nd book 
+My exercises and projects from Head First Java 2nd book 
 
 <div align="center">
-<img width="300" alt="GIF" align="center" src="https://user-images.githubusercontent.com/103402889/218546205-1aea1781-2cb2-489a-b3eb-cbd3292933ef.png">
-<div/>
-<br>
+<img width="300" alt="GIF" align="center" src="../assets/head-first-java.png">
+<br/>
 
 
 
