@@ -1,8 +1,11 @@
 package sia.tacocloud;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import sia.tacocloud.Ingredient.Type;
@@ -59,8 +62,13 @@ public class DesignTacoController {
     }
 
     @PostMapping
-    private String processTaco(Taco taco,
-                               @ModelAttribute TacoOrder tacoOrder) {
+    private String processTaco(
+            @Valid Taco taco, Errors errors,
+            @ModelAttribute TacoOrder tacoOrder) {
+        if (errors.hasErrors()) {
+            return "design";
+        }
+
         tacoOrder.addTaco(taco);
         log.info("Processing taco: {}", taco);
 
