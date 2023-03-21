@@ -8,10 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
-import sia.tacocloud.Ingredient;
-import sia.tacocloud.Ingredient.Type;
-import sia.tacocloud.Taco;
-import sia.tacocloud.TacoOrder;
+import sia.tacocloud.entities.Ingredient;
+import sia.tacocloud.entities.Taco;
+import sia.tacocloud.entities.TacoOrder;
+import sia.tacocloud.entities.enuns.Type;
 import sia.tacocloud.repositories.IngredientRepository;
 
 import java.util.List;
@@ -33,7 +33,7 @@ public class DesignTacoController {
     @ModelAttribute
     public void addIngredientsToModel (Model model) {
         List<Ingredient> ingredients = ingredientRepository.findAll();
-        Type[] types = Ingredient.Type.values();
+        Type[] types = Type.values();
         for (Type type : types) {
             model.addAttribute(type.toString().toLowerCase(),
                     filterByType(ingredients, type));
