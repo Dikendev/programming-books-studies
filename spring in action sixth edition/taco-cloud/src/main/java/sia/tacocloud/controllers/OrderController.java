@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
-import sia.tacocloud.TacoOrder;
+import sia.tacocloud.entities.TacoOrder;
 
 @Slf4j
 @Controller

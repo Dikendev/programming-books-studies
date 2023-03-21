@@ -3,7 +3,8 @@ package sia.tacocloud.repositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-import sia.tacocloud.Ingredient;
+import sia.tacocloud.entities.Ingredient;
+import sia.tacocloud.entities.enuns.Type;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,7 +20,7 @@ public class JdbcIngredientRepository implements IngredientRepository {
     }
 
     @Override
-    public Iterable<Ingredient> findAll() {
+    public List<Ingredient> findAll() {
         return jdbcTemplate.query(
                 "select id, name, type from Ingredient",
                 this::mapRowToIngredient
@@ -41,9 +42,10 @@ public class JdbcIngredientRepository implements IngredientRepository {
         return  new Ingredient(
                 row.getString("id"),
                 row.getString("name"),
-                Ingredient.Type.valueOf(row.getString("type")));
+                Type.valueOf(row.getString("type")));
     }
 
+    @Override
     public Ingredient save(Ingredient ingredient) {
         jdbcTemplate.update(
                 "insert into Ingredient (id, name, type) values (?, ?, ?)",
@@ -52,5 +54,4 @@ public class JdbcIngredientRepository implements IngredientRepository {
                 ingredient.getType().toString());
         return ingredient;
     }
-
 }
