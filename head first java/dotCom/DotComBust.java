@@ -2,12 +2,12 @@ package dotCom;
 
 import java.util.ArrayList;
 public class DotComBust {
-
-    private static void main (String[] args) {
+    public static void main (String[] args) {
         DotComBust game = new DotComBust();
         game.setUpGame();
         game.startPlaying();
     }
+
     //declare and initialize the variables we`ll need
     private GameHelper helper = new GameHelper();
     private final ArrayList<DotCom> dotComsList = new ArrayList<DotCom>();
@@ -48,7 +48,7 @@ public class DotComBust {
         numOfGuesses++;
         String result = "miss";
 
-        for (Dotcom dotComToTest : dotComsList) {
+        for (DotCom dotComToTest : dotComsList) {
             result = dotComToTest.checkYourself(userGuess);
             if (result.equals("hit")) {
                 break;
