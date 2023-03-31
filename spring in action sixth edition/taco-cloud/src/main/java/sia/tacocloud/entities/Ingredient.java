@@ -1,11 +1,21 @@
 package sia.tacocloud.entities;
 
-import lombok.Data;
-import sia.tacocloud.entities.enuns.Type;
+import lombok.*;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.Table;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
+@RequiredArgsConstructor
+@Table("ingredients")
 public class Ingredient {
-    private final String id;
-    private final String name;
-    private final Type type;
+    @PrimaryKey
+    private String id;
+    private String name;
+    private Type type;
+
+    public enum Type {
+        WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
+    }
 }
