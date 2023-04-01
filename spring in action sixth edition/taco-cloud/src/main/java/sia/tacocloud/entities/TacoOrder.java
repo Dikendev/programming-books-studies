@@ -5,21 +5,25 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Document
 @Data
 public class TacoOrder implements Serializable {
-
+    @Serial
     private static final long serialVersionUID = 1L;
 
-    private Long id;
+    @Id
+    private String id;
 
-    private Date placeAt;
-
+    private Date placeAt = new Date();
     @NotBlank(message = "Your name is required")
     private String deliveryName;
     @NotBlank(message = "Street is required")
@@ -30,10 +34,8 @@ public class TacoOrder implements Serializable {
     private String deliveryState;
     @NotBlank(message = "Zip code is required")
     private String deliveryZip;
-
     @CreditCardNumber(ignoreNonDigitCharacters = true, message = "Not a valid credit card number")
     private String ccNumber;
-
     @Pattern(regexp = "ˆ(0[1-9] |1[0-2]) / ([2-9][0-9])$",
             message = "Must be formatted MM//YY")
     private String ccExpiration;
