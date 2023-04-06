@@ -2,6 +2,7 @@ package com.example.superheroes.antiHero.service;
 
 import com.example.superheroes.antiHero.entity.AntiHeroEntity;
 import com.example.superheroes.antiHero.repository.AntiHeroRepository;
+import com.example.superheroes.exception.NotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,7 @@ import java.util.UUID;
     }
 
     public AntiHeroEntity findAntiHeroById(UUID id) {
-       return findAntiHeroById(id);
+       return findOrThrow(id);
     }
 
     public void removeAntiHeroById(UUID id) {
@@ -29,6 +30,15 @@ import java.util.UUID;
     }
 
     public void updateAntiHero(UUID id, AntiHeroEntity antiHero) {
+        findOrThrow(id);
         repository.save(antiHero);
+    }
+
+    public AntiHeroEntity findOrThrow(final UUID id) {
+        return repository
+                .findById(id)
+                .orElseThrow(
+                        () -> new NotFoundException("Anti-hero by id " +
+                                id + " was not found"));
     }
 }
