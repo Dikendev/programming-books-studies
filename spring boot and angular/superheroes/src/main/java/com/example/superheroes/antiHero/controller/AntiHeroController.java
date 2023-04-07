@@ -5,8 +5,8 @@ import com.example.superheroes.antiHero.entity.AntiHeroEntity;
 import com.example.superheroes.antiHero.service.AntiHeroService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-import lombok.extern.log4j.Log4j2;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -16,14 +16,12 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-@Log4j2
 @AllArgsConstructor
 @RestController
 @RequestMapping("api/v1/anti-heroes")
 public class AntiHeroController {
 
     private final AntiHeroService heroService;
-
     private final ModelMapper modelMapper;
 
     @GetMapping("/{id}")
@@ -32,16 +30,20 @@ public class AntiHeroController {
     }
 
     @GetMapping
-    public List<AntiHeroDto> getAntiHeroes() {
+    public List<AntiHeroDto> getAntiHeroes(Pageable pageable) {
+        int toSkip =
+                pageable.getPageSize() *
+                pageable.getPageNumber();
+
         var antiHeroList = StreamSupport
-                .stream(heroService.findAllAntiHeroes().spliterator(),
-                        false)
+                .stream(heroService.findAllAntiHeroes().spliterator(), false)
                 .collect(Collectors.toList());
 
         return antiHeroList
                 .stream()
                 .map(this::convertToDto)
-                .collect(Collectors.toList());
+                .collect(Collectors.toList()
+                );
     }
 
     @PostMapping
