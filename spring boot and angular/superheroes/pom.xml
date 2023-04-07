@@ -14,14 +14,19 @@
 	<name>superheroes</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>19</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -30,7 +35,7 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -38,17 +43,16 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>6.0.7</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<!--Dto mapper-->
+		<!-- Dto mapper -->
 		<dependency>
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
 			<version>3.1.1</version>
 		</dependency>
-<!--		validation-->
+		<!-- validation -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
@@ -61,9 +65,13 @@
 		</dependency>
 		<!-- Redis -->
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-redis</artifactId>
-			<version>3.0.3</version>
+			<version>2.4.5</version>
 		</dependency>
 		<dependency>
 			<groupId>redis.clients</groupId>
@@ -71,10 +79,11 @@
 			<version>3.5.1</version>
 			<type>jar</type>
 		</dependency>
+		<!-- OpenAPI -->
 		<dependency>
 			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>1.6.15</version>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.0.4</version>
 		</dependency>
 	</dependencies>
 
@@ -109,18 +118,7 @@
 						</goals>
 					</execution>
 				</executions>
-				<configuration>
-					<apiDocsUrl>
-						http://localhost:8080/v3/api-docs</apiDocsUrl>
-					<outputFileName>openapi.json</outputFileName>
-					<outputDir>/home/springdoc/output-folder</outputDir>
-					<skip>false</skip>
-					<headers>
-						<header1-key>header1-value</header1-key>
-					</headers>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
