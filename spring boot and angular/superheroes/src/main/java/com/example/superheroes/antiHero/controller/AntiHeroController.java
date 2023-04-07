@@ -10,7 +10,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @AllArgsConstructor
 @RestController
@@ -21,17 +24,22 @@ public class AntiHeroController {
 
     private final ModelMapper modelMapper;
 
-    private AntiHeroDto convertToDto(AntiHeroEntity entity) {
-        return modelMapper.map(entity, AntiHeroDto.class);
-    }
-
-    private AntiHeroEntity convertToEntity(AntiHeroDto dto) {
-        return modelMapper.map(dto, AntiHeroEntity.class);
-    }
-
     @GetMapping("/{id}")
     public AntiHeroDto getAntiHeroById(@PathVariable("id") UUID id) {
         return convertToDto(heroService.findAntiHeroById(id));
+    }
+
+    @GetMapping
+    public List<AntiHeroDto> getAntiHeroes() {
+        var antiHeroList = StreamSupport
+                .stream(heroService.findAllAntiHeroes().spliterator(),
+                        false)
+                .collect(Collectors.toList());
+
+        return antiHeroList
+                .stream()
+                .map(this::convertToDto)
+                .collect(Collectors.toList());
     }
 
     @PostMapping
@@ -60,4 +68,11 @@ public class AntiHeroController {
         heroService.removeAntiHeroById(id);
     }
 
+    private AntiHeroDto convertToDto(AntiHeroEntity entity) {
+        return modelMapper.map(entity, AntiHeroDto.class);
+    }
+
+    private AntiHeroEntity convertToEntity(AntiHeroDto dto) {
+        return modelMapper.map(dto, AntiHeroEntity.class);
+    }
 }
