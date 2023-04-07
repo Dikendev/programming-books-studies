@@ -10,7 +10,8 @@ import java.util.UUID;
 
 
 @AllArgsConstructor
-@Service public class AntiHeroService {
+@Service
+public class AntiHeroService {
     private final AntiHeroRepository repository;
 
     public Iterable<AntiHeroEntity> findAllAntiHeroes() {
