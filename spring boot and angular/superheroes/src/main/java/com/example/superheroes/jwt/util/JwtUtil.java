@@ -1,8 +1,10 @@
 package com.example.superheroes.jwt.util;
 
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cglib.core.internal.Function;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +15,27 @@ import java.util.Map;
 @Service
 public class JwtUtil {
 
-    @Value("${jw}")
+    @Value("${jwt.secret}")
     private String SECRET_KEY;
+
+    public Date extractExpiration(String token) {
+        return extractClaim(token, Claims::getExpiration);
+    }
+
+    public Boolean isTokenExpired(String token) {
+        return extractExpiration(token).before(new Date());
+    }
+
+    public String extractUserName(String token) {
+        return extractClaim(token, Claims::getSubject);
+    }
+
+    public Boolean validateToken(String token, UserDetails userDetails) {
+        final String username = extractUserName(token);
+
+        return (username.equals(userDetails.getUsername()) &&
+                        !isTokenExpired(token)) ;
+    }
 
     private String createToken(Map<String, Object> claims, String subject) {
         return Jwts
@@ -33,5 +54,16 @@ public class JwtUtil {
         return createToken(claims, userDetails.getUsername());
     }
 
+    public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
+        final Claims claims = extractAllClaims(token);
+        return claimsResolver.apply(claims);
+    }
 
+    private Claims extractAllClaims(String token) {
+        return Jwts
+                .parserBuilder()
+                .setSigningKey(SECRET_KEY).build()
+                .parseClaimsJwt(token)
+                .getBody();
+    }
 }
