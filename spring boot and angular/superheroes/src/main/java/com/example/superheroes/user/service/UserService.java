@@ -25,6 +25,10 @@ public class UserService {
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
 
+    public UserEntity searchByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
 //    Creating a new user > following 3 methods
     private byte[] createSalt() {
         var random = new SecureRandom();
