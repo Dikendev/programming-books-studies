@@ -2,11 +2,11 @@ package com.example.superheroes.user.controller;
 
 import com.example.superheroes.user.data.UserDto;
 import com.example.superheroes.user.service.UserService;
-import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.security.NoSuchAlgorithmException;
 import java.util.UUID;
 
