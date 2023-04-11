@@ -21,7 +21,6 @@ public class UserRepositoryTest {
     public void setup() {
         //give
         userTest.setEmail("diken.dev@gmail.com");
-        userTest.setMobileNumber("993919373");
         repositoryTest.save(userTest);
     }
 
@@ -50,4 +49,8 @@ public class UserRepositoryTest {
         assertThat(expected).isEqualTo(userTest);
     }
 
+    @Test
+    void itShouldCheckWhenUserEmailDoesNotExist() {
+
+    }
 }
