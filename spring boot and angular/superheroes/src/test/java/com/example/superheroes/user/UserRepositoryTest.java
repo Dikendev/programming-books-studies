@@ -52,5 +52,10 @@ public class UserRepositoryTest {
     @Test
     void itShouldCheckWhenUserEmailDoesNotExist() {
 
+        //when
+        boolean expected = repositoryTest.selectExistsEmail(userTest.getEmail());
+
+        //then
+        assertThat(expected).isFalse();
     }
 }
