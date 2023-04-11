@@ -19,14 +19,19 @@ public class UserRepositoryTest {
 
     @BeforeEach
     public void setup() {
-        userTest.setEmail("");
-        userTest.setMobileNumber("222");
+        //give
+        userTest.setEmail("diken.dev@gmail.com");
+        userTest.setMobileNumber("993919373");
+        repositoryTest.save(userTest);
+    }
+
+    @BeforeEach
+    void tearDown() {
+        repositoryTest.deleteAll();
     }
 
      @Test
      void itShouldCheckWhenUserEmailExist() {
-
-         repositoryTest.save(userTest);
 
          //when
          boolean expected = repositoryTest.selectExistsEmail(userTest.getEmail());
@@ -38,12 +43,11 @@ public class UserRepositoryTest {
     @Test
     void itShouldFindUserWhenEmailExist() {
 
-        repositoryTest.save(userTest);
-
         //when
         UserEntity expected = repositoryTest.findByEmail(userTest.getEmail());
 
         //then
         assertThat(expected).isEqualTo(userTest);
     }
+
 }
