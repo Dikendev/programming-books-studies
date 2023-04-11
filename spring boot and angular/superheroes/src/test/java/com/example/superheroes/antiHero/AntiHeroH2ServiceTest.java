@@ -78,4 +78,13 @@ public class AntiHeroH2ServiceTest {
         });
     }
 
+    @Test
+    public void shouldFindAntiHeroById() {
+        AntiHeroEntity savedAntiHero = service.addAntiHero(antiHero);
+
+        AntiHeroEntity foundAntiHero = service.findAntiHeroById(savedAntiHero.getId());
+
+        assertThat(foundAntiHero.getId()).isNotNull();
+    }
+
 }
