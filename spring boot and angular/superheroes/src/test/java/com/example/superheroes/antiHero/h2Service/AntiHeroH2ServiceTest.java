@@ -1,4 +1,4 @@
-package com.example.superheroes.antiHero;
+package com.example.superheroes.antiHero.h2Service;
 
 import com.example.superheroes.antiHero.entity.AntiHeroEntity;
 import com.example.superheroes.antiHero.repository.AntiHeroRepository;
