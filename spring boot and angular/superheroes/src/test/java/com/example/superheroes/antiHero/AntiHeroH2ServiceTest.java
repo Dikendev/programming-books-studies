@@ -4,9 +4,11 @@ import com.example.superheroes.antiHero.entity.AntiHeroEntity;
 import com.example.superheroes.antiHero.repository.AntiHeroRepository;
 import com.example.superheroes.antiHero.service.AntiHeroService;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @DataJpaTest
 public class AntiHeroH2ServiceTest {
@@ -24,6 +26,17 @@ public class AntiHeroH2ServiceTest {
         antiHero.setHouse("MCU");
 
         service = new AntiHeroService(repository);
+    }
+
+    @Test
+    public void shouldFindAllAntiHeroes() {
+        service.addAntiHero(antiHero);
+
+        Iterable<AntiHeroEntity> antiHeroEntitiesList = service.findAllAntiHeroes();
+
+        AntiHeroEntity savedAntiHero = antiHeroEntitiesList.iterator().next();
+
+        assertThat(savedAntiHero).isNotNull();
     }
 
 }
