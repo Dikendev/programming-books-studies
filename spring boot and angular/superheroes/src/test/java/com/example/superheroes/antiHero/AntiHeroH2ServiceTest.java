@@ -49,4 +49,15 @@ public class AntiHeroH2ServiceTest {
         assertThat(antiHero).isEqualTo(savedAntiHero);
     }
 
+    @Test
+    public void shouldUpdateAntiHero() {
+        AntiHeroEntity savedAntiHero = service.addAntiHero(antiHero);
+        savedAntiHero.setHouse("Blumenau");
+
+        service.updateAntiHero(savedAntiHero.getId(), savedAntiHero);
+        AntiHeroEntity foundAntiHero = service.findAntiHeroById(savedAntiHero.getId());
+
+        assertThat(foundAntiHero.getHouse()).isEqualTo("San Francisco");
+    }
+
 }
