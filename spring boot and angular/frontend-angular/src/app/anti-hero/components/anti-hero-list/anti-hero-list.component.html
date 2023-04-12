@@ -1,0 +1,12 @@
+<table>
+    <thead>
+        <th *ngFor="let item of headers">{{item.headerName}}</th>
+    </thead>
+    <tbody>
+        <tr (click)="selectAntiHero(item)" *ngFor="let item of antiHeroes">
+            <ng-container *ngFor="let header of headers">
+                <td>{{item[header.fieldName]}}</td>
+            </ng-container>
+        </tr>
+    </tbody>
+</table>
