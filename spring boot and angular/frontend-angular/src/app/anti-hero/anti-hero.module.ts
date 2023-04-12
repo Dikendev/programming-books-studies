@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormComponent } from './pages/pages/form/form.component';
+import { AntiHeroRoutingModule } from './anti-hero-routing.module';
 import { ListComponent } from './pages/list/list.component';
-
+import { FormComponent } from './pages/pages/form/form.component';
+import { AntiHeroListComponent } from './components/anti-hero-list/anti-hero-list.component';
 
 
 @NgModule({
   declarations: [
+    ListComponent,
     FormComponent,
-    ListComponent
+    AntiHeroListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AntiHeroRoutingModule
   ]
 })
 export class AntiHeroModule { }

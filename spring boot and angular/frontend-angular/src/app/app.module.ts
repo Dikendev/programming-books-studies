@@ -8,7 +8,6 @@ import { FormComponent } from './anti-hero/pages/pages/form/form.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent
   ],
   imports: [
     BrowserModule,
