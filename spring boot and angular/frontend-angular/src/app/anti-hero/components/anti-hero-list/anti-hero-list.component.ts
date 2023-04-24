@@ -4,17 +4,18 @@ import { AntiHero } from '../../models/anti-hero.interface';
 @Component({
   selector: 'app-anti-hero-list',
   templateUrl: './anti-hero-list.component.html',
-  styleUrls: ['./anti-hero-list.component.sass']
+  styleUrls: ['./anti-hero-list.component.scss']
 })
 export class AntiHeroListComponent implements OnInit{
-  @Input() headers: Array<{headerName: String, fieldName: keyof AntiHero}> [];
+  @Input() headers: Array<{headerName: string, fieldName: keyof AntiHero}> = [];
   @Input() antiHeroes: Array<AntiHero> = [];
-  @Output() antiHero = new EventEmitter();
-
+  @Output() antiHero = new EventEmitter();  
+  
   constructor() { }
   ngOnInit(): void {
-    
-  }
+
+  } 
+  
   selectAntiHero(antiHero: AntiHero) {
     this.antiHero.emit(antiHero);
   }
