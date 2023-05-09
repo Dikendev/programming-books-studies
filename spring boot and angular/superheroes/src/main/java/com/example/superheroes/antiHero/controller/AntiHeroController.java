@@ -39,13 +39,11 @@ public class AntiHeroController {
         //SLF4J
         LOGGER.info("Using SLF4J: Getting anti-hero list - getAntiHeroes()");
         //LOMBOK SLF4j
-        log.info("Using SLF4J Lombok: Getting anti hero list - getAntiHeroes()");
         // Mapstruct is another dto mapper, but it's not straight forward
         var antiHeroList = StreamSupport
                 .stream(service.findAllAntiHeroes().spliterator(), false)
                 .skip(toSkip).limit(pageable.getPageSize())
-                .collect(Collectors.toList());
-
+                .toList();
 
         return antiHeroList
                 .stream()
