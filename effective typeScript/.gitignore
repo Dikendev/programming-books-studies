@@ -16,7 +16,7 @@ bin/
 !**/src/test/**/bin/
 
 ### NetBeans ###
-.effective typeScript/node_modules
+/node_modules
 /nbbuild/
 /dist/
 /nbdist/
