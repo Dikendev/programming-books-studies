@@ -1,4 +1,4 @@
-<h1 align="center">Java Books</h1><br>
+<h1 align="center">Programming Books</h1><br>
 <p>Estudos usando livros sobre a linguagem java, e projetos propostos em cada livro.</p>
 <br>
 
