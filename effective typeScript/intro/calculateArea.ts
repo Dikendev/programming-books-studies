@@ -11,6 +11,7 @@ type Shape = Square | Rectangle;
 
 function calculateArea(shape: Shape) {
 	if (shape.kind === "rectangle") {
+		shape;
 		return shape.width * shape.height;
 	} else {
 		shape;
