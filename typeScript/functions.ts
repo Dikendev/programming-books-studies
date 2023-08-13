@@ -41,5 +41,16 @@ function factorial(number: number): number {
 
 (function () {
 	let x = "Oi";
-	console.log(x);
+	// console.log(x);
 })();
+
+// Lambda Functions
+let foo = (x: number) => 10 + x;
+// console.log(foo(100));
+
+let foo2 = (x: number) => {
+	x = 10 + x;
+	console.log(x);
+};
+
+foo2(100);
