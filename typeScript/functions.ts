@@ -24,8 +24,22 @@ addNumbers(10, 10, 10, 10, 20);
 // Default parameters
 function calculate_discount(price: number, rate: number = 0.5) {
 	let discount = price * rate;
-	console.log("Discount Amount", discount);
+	// console.log("Discount Amount", discount);
 }
 
 calculate_discount(1000);
 calculate_discount(1000, 0.3);
+
+//	Recursion
+function factorial(number: number): number {
+	if (number <= 0) {
+		return 1;
+	} else {
+		return number * factorial(number - 1);
+	}
+}
+
+(function () {
+	let x = "Oi";
+	console.log(x);
+})();
