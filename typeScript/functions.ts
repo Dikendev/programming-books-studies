@@ -6,7 +6,7 @@ function disp_details(id: number, name: string, mail_id?: string) {
 }
 
 disp_details(123, "Jhon");
-disp_details(111, "Mary", "mary@xyc.com");
+// disp_details(111, "Mary", "mary@xyc.com");
 
 // Rest parameters
 function addNumbers(...nums: number[]) {
@@ -53,4 +53,23 @@ let foo2 = (x: number) => {
 	console.log(x);
 };
 
-foo2(100);
+// foo2(100);
+
+// Syntactic Variations
+// Parameter type Inference
+
+let func = (x: any) => {
+	if (typeof x == "number") {
+		console.log(x + "is number");
+	} else if (typeof x == "string") {
+		console.log(x + "is a string");
+	}
+};
+func(12);
+func("Diego");
+
+let disp = () => {
+	console.log("Function Invoked");
+};
+
+disp();
