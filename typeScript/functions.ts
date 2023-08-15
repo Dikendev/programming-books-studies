@@ -72,4 +72,15 @@ let disp = () => {
 	console.log("Function Invoked");
 };
 
-disp();
+// disp();
+
+function disp2(s1: string): void;
+function disp2(n1: number, s1: string): void;
+
+function disp2(x: any, y?: any): void {
+	console.log(x);
+	console.log(y);
+}
+
+disp2("abc");
+disp2(1, "xyz");
