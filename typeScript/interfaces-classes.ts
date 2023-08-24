@@ -66,7 +66,7 @@ school.enrollStudent(student1);
 school.enrollStudent(student2);
 // console.log(school.getStudentNames());
 
-// Example 1: E-Commerce System - Product and ShoppingCart
+// E-Commerce System - Product and ShoppingCart
 
 class Product {
 	constructor(public id: number, public name: string, public price: number) {}
@@ -99,3 +99,29 @@ cart.addItem(lapTop, 1);
 cart.addItem(note, 2);
 console.log(cart.getTotal());
 console.log(JSON.stringify(cart, null, 2));
+
+// Social Media Platform - User and Post
+
+class User {
+	constructor(public id: number, public username: string) {}
+}
+
+interface Post {
+	id: number;
+	author: User;
+	content: string;
+	likes: string;
+}
+
+class SocialMediaPlatform {
+	private users: User[] = [];
+	private posts: Post[] = [];
+
+	addUser(user: User): void {
+		this.users.push(user);
+	}
+}
+const user1 = new User(1, "Diego");
+const newUsers = new SocialMediaPlatform();
+newUsers.addUser(user1);
+console.log(newUsers);
