@@ -64,4 +64,38 @@ const student2: Student = {
 
 school.enrollStudent(student1);
 school.enrollStudent(student2);
-console.log(school.getStudentNames());
+// console.log(school.getStudentNames());
+
+// Example 1: E-Commerce System - Product and ShoppingCart
+
+class Product {
+	constructor(public id: number, public name: string, public price: number) {}
+}
+
+interface CartItem {
+	product: Product;
+	quantity: number;
+}
+
+class ShoppingCart {
+	private items: CartItem[] = [];
+
+	addItem(product: Product, quantity: number): void {
+		this.items.push({ product, quantity });
+	}
+
+	getTotal(): number {
+		return this.items.reduce(
+			(total, item) => total + item.product.price * item.quantity,
+			0
+		);
+	}
+}
+
+const lapTop = new Product(1, "lapTop", 2000);
+const note = new Product(2, "gamr", 1000);
+const cart = new ShoppingCart();
+cart.addItem(lapTop, 1);
+cart.addItem(note, 2);
+console.log(cart.getTotal());
+console.log(JSON.stringify(cart, null, 2));
