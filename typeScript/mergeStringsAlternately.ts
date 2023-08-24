@@ -6,7 +6,7 @@ function mergeAlternately(word1: string, word2: string): string {
 		newArray.push(word1[i], word2[i]);
 	}
 
-	if (word2.length > lowerLengthArray)
+	if (word1.length > lowerLengthArray)
 		newArray.push(word1.substring(lowerLengthArray));
 
 	if (word2.length > lowerLengthArray)
