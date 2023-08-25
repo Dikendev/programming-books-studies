@@ -158,3 +158,51 @@ platform.giveLike(user1);
 platform.giveLike(user1);
 console.log(platform.getPostsByUser(user1));
 console.log(platform);
+
+// Task Management System - Task and User
+
+enum TaskStatus {
+	Open,
+	InProgress,
+	Completed,
+}
+
+class Task {
+	constructor(
+		public id: number,
+		public title: string,
+		public assignee: UserAssignee,
+		public status: TaskStatus
+	) {}
+}
+
+interface UserAssignee {
+	id: number;
+	name: string;
+}
+
+class TaskManagementSystem {
+	private task: Task[] = [];
+
+	createTask(title: string, assignee: UserAssignee): Task {
+		const newTask = new Task(
+			this.task.length + 1,
+			title,
+			assignee,
+			TaskStatus.InProgress
+		);
+		this.task.push(newTask);
+		return newTask;
+	}
+
+	getTaskAssignee(assignee: UserAssignee): Task[] {
+		return this.task.filter((task) => task.assignee.id === assignee.id);
+	}
+}
+
+const user01: UserAssignee = { id: 1, name: "Diego" };
+const user02: UserAssignee = { id: 2, name: "Cristina" };
+
+const taskSystem = new TaskManagementSystem();
+taskSystem.createTask("Implement feature X", user01);
+taskSystem.getTaskAssignee(user01);
