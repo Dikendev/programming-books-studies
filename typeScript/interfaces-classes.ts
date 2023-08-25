@@ -110,7 +110,7 @@ interface Post {
 	id: number;
 	author: User;
 	content: string;
-	likes: string;
+	likes: number;
 }
 
 class SocialMediaPlatform {
@@ -118,10 +118,43 @@ class SocialMediaPlatform {
 	private posts: Post[] = [];
 
 	addUser(user: User): void {
-		this.users.push(user);
+		const newUser = {
+			id: (user.id = this.users.length + 1),
+			username: user.username,
+		};
+
+		this.users.push(newUser);
+	}
+
+	createPost(author: User, content: string): void {
+		const newPost: Post = {
+			id: this.posts.length + 1,
+			author,
+			content,
+			likes: 0,
+		};
+		this.posts.push(newPost);
+	}
+
+	getPostsByUser(user: User): Post[] {
+		return this.posts.filter((post) => post.author.id === user.id);
+	}
+
+	giveLike(user: User): void {
+		if (user) {
+			this.posts[0].likes++;
+		}
 	}
 }
 const user1 = new User(1, "Diego");
-const newUsers = new SocialMediaPlatform();
-newUsers.addUser(user1);
-console.log(newUsers);
+const user2 = new User(1, "Cristina");
+const user3 = new User(1, "LeroLero");
+const platform = new SocialMediaPlatform();
+platform.addUser(user1);
+platform.addUser(user2);
+platform.addUser(user3);
+platform.createPost(user1, "Hello World");
+platform.giveLike(user1);
+platform.giveLike(user1);
+console.log(platform.getPostsByUser(user1));
+console.log(platform);
