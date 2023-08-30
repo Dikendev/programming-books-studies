@@ -20,3 +20,11 @@ let re2 = /(\w+)\s(\w+)/;
 let str2 = "zara ali";
 let newStr2 = str2.replace(re, "$2, $1");
 console.log(newStr2);
+
+let str3 = "Apples are round, and apples are juicy";
+let srt3 = "Apples are round, and apples are juicy";
+if (str.search(re) === -1) {
+	console.log("Does not contains appels");
+} else {
+	console.log("Contains Apples");
+}
