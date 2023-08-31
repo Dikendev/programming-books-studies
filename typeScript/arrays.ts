@@ -37,5 +37,10 @@ let passedArrayNumbers: number[] = [12, 5, 5, 130, 44].filter(isBigEnough);
 let num: number[] = [7, 8, 9];
 num.forEach((element) => {
 	element * 2;
-	console.log(" element", element * 2);
+	// console.log(" element", element * 2);
 });
+
+// indefOf() = method returns the first index at witch a given element can be found in the array, or -1 if it is not present.
+const number: string = "8";
+let numbers: number = "this is a test search of number 8:".indexOf(number);
+// console.log("index of: ", numbers);
