@@ -85,4 +85,11 @@ let reduceRight = [0, 1, 2, 3].reduceRight((a, b) => a + b);
 
 // reverse() = Method reverses the element of an array. The fist array element becomes the last and the last becomes the first.
 let reverseNum = [0, 1, 2, 3, 4].reverse();
-console.log(reverseNum);
+// console.log(reverseNum);
+
+// shift() = Method removes the first element from an array and returns that element
+const shift = (number: number[]): number | undefined => {
+	return number.shift();
+};
+let numberToShift = [12, 5, 3, 6];
+console.log(shift(numberToShift));
