@@ -40,7 +40,7 @@ num.forEach((element) => {
 	// console.log(" element", element * 2);
 });
 
-// indefOf() = method returns the first index at witch a given element can be found in the array, or -1 if it is not present.
+// indefOf() = method returns the first index at which a given element can be found in the array, or -1 if it is not present.
 const number: string = "8";
 let numbers: number = "this is a test search of number 8:".indexOf(number);
 // console.log("index of: ", numbers);
@@ -48,4 +48,8 @@ let numbers: number = "this is a test search of number 8:".indexOf(number);
 // join() = method joins all the elements of an array into a string
 let arr = new Array("First", "Second", "Third");
 let str = arr.join("+");
-console.log("str", str);
+// console.log("str", str);
+
+// lastIndexOf() = method returns the last index at which a given element can be found in the array, or -1 if it not present. The array is searched backwards, starting at fromIndex.
+let index = [12, 5, 8, 130, 55].lastIndexOf(130);
+// console.log("index is:", index)
