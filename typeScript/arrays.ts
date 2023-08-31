@@ -31,4 +31,11 @@ let passed: boolean = [12, 5, 6, 130, 44].every(isBigEnough);
 
 // filter() = method creates a new array with all elements that pass the test implemented by the provided function.
 let passedArrayNumbers: number[] = [12, 5, 5, 130, 44].filter(isBigEnough);
-console.log(passedArrayNumbers);
+// console.log(passedArrayNumbers);
+
+// forEach() = method calls a function for each element in the array.
+let num: number[] = [7, 8, 9];
+num.forEach((element) => {
+	element * 2;
+	console.log(" element", element * 2);
+});
