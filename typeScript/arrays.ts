@@ -79,7 +79,7 @@ for (let i = 0; i < numberToPush.length; i++) {
 let totalReduce = [0, 1, 2, 3].reduce((a, b) => a + b);
 // console.log(totalReduce);
 
-// reduceRight() = Method applies a function simultaneously against two values of the array (from right-to-left) as to reduce it to a single value
+// reduceRight() = Method applies a function simultaneously against two values of the array (from right-to-left) as to reduce it to a single value.
 let reduceRight = [0, 1, 2, 3].reduceRight((a, b) => a + b);
 // console.log(reduceRight);
 
@@ -87,22 +87,26 @@ let reduceRight = [0, 1, 2, 3].reduceRight((a, b) => a + b);
 let reverseNum = [0, 1, 2, 3, 4].reverse();
 // console.log(reverseNum);
 
-// shift() = Method removes the first element from an array and returns that element
+// shift() = Method removes the first element from an array and returns that element.
 const shift = (number: number[]): number | undefined => {
 	return number.shift();
 };
 let numberToShift = [12, 5, 3, 6];
 // console.log(shift(numberToShift));
 
-// slice() = Method extracts a section of an array and returns a new array
+// slice() = Method extracts a section of an array and returns a new array.
 let arrayToSlice = ["orange", "mango", "banana", "sugar", "tea"];
 // console.log("arr.slice(1,2):", arrayToSlice.slice(1, 2));
 // console.log("arr.slice(1,3):", arrayToSlice.slice(1, 3));
 
-// some() = Method test whether some element in the array passes the test implemented by the provided function
+// some() = Method test whether some element in the array passes the test implemented by the provided function.
 const isBigEnoughSome = (element: number, index: number, array: number[]) => {
 	return element >= 10;
 };
-
 let retval = [2, 5, 6, 7, 12, 2].some(isBigEnoughSome);
-console.log("retval", retval);
+// console.log("retval", retval);
+
+// sort() = Method sorts the elements of an array.
+let arrayToSorted = ["orange", "mango", "banana", "sugar"];
+let sorted = arrayToSorted.sort();
+console.log("sorted", sorted);
