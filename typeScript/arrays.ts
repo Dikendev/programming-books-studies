@@ -12,7 +12,7 @@ for (let i = 0; i < names.length; i++) {
 	// console.log(names[i]);
 }
 
-// concat() = Method returns a new array comprised of this array joined with two or more arrays. (pure method)
+// concat() = Method returns a new array comprised of this array joined with two or more arrays. (pure method).
 const numeric: number[] = [1, 2, 3];
 const numericComp = ["1", "1", "1"].map(Number);
 const newNumbers = numeric.concat(numericComp);
@@ -45,7 +45,7 @@ const number: string = "8";
 let numbers: number = "this is a test search of number 8:".indexOf(number);
 // console.log("index of: ", numbers);
 
-// join() = Method joins all the elements of an array into a string
+// join() = Method joins all the elements of an array into a string.
 let arr = new Array("First", "Second", "Third");
 let str = arr.join("+");
 // console.log("str", str);
@@ -65,4 +65,12 @@ let square = numbersMap.map(squareNumber);
 // pop() = Method removes the last element from an array and returns that element.
 let numberPop = [1, 5, 9];
 let elementPop = numberPop.pop();
-console.log(elementPop);
+// console.log(elementPop);
+
+// push() = Method appends the given elements(s) in the last of the array and returns the length of the new array.
+let numberToPush: number[] = [6, 9, 3, 9, 7];
+let numbPush: number[] = [2, 3, 4];
+for (let i = 0; i < numberToPush.length; i++) {
+	numbPush.push(numberToPush[i]);
+}
+console.log("numbPush:", numbPush);
