@@ -109,4 +109,10 @@ let retval = [2, 5, 6, 7, 12, 2].some(isBigEnoughSome);
 // sort() = Method sorts the elements of an array.
 let arrayToSorted = ["orange", "mango", "banana", "sugar"];
 let sorted = arrayToSorted.sort();
-console.log("sorted", sorted);
+// console.log("sorted", sorted);
+
+// splice() = Method changes the content of an array, adding new elements while removing old elements.
+let arrToSplice = ["orange", "mango", "banana", "sugar"];
+let removed = arrToSplice.splice(2, 1, "water");
+console.log("adding 1:", arrToSplice);
+console.log("removed 1:", removed);
