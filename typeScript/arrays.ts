@@ -1,16 +1,13 @@
 let alphas: string[];
 alphas = ["1", "2", "3", "4"];
-
 let arr_names: number[] = new Array(4);
 for (let i = 0; i < arr_names.length; i++) {
 	arr_names[i] = i * 2;
 	// console.log(arr_names[i]);
 }
 // console.log(arr_names);
-
 let namesString = "Mary Tom, Jack, Jill";
 let names: string[] = new Array(namesString);
-
 for (let i = 0; i < names.length; i++) {
 	// console.log(names[i]);
 }
@@ -22,9 +19,16 @@ const newNumbers = numeric.concat(numericComp);
 // console.log(newNumbers);
 
 // every() = method test whether all the elements in an array passes the test implemented by the provided function.
-function isBigEnough(element: number, index: number, array: number[]): boolean {
-	return element >= 10;
-}
-
+const isBigEnough = (element: number, index: number, array: number[]) => {
+	if (element >= 10) {
+		return element;
+	} else if (element < 3) {
+		return element;
+	}
+};
 let passed: boolean = [12, 5, 6, 130, 44].every(isBigEnough);
 // console.log("Test Value:", passed);
+
+// filter() = method creates a new array with all elements that pass the test implemented by the provided function.
+let passedArrayNumbers: number[] = [12, 5, 5, 130, 44].filter(isBigEnough);
+console.log(passedArrayNumbers);
