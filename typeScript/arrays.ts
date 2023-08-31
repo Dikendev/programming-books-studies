@@ -53,3 +53,11 @@ let str = arr.join("+");
 // lastIndexOf() = method returns the last index at which a given element can be found in the array, or -1 if it not present. The array is searched backwards, starting at fromIndex.
 let index = [12, 5, 8, 130, 55].lastIndexOf(130);
 // console.log("index is:", index)
+
+// map() = method creates a new array with the results of calling a provided function on every element in this array.
+let numbersMap = [1, 4, 9];
+const squareNumber = (number: number) => {
+	return number * number;
+};
+let square = numbersMap.map(squareNumber);
+console.log("roots", square);
