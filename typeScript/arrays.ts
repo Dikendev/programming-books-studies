@@ -44,3 +44,8 @@ num.forEach((element) => {
 const number: string = "8";
 let numbers: number = "this is a test search of number 8:".indexOf(number);
 // console.log("index of: ", numbers);
+
+// join() = method joins all the elements of an array into a string
+let arr = new Array("First", "Second", "Third");
+let str = arr.join("+");
+console.log("str", str);
