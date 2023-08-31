@@ -18,7 +18,7 @@ const numericComp = ["1", "1", "1"].map(Number);
 const newNumbers = numeric.concat(numericComp);
 // console.log(newNumbers);
 
-// every() = method test whether all the elements in an array passes the test implemented by the provided function.
+// every() = Method test whether all the elements in an array passes the test implemented by the provided function.
 const isBigEnough = (element: number, index: number, array: number[]) => {
 	if (element >= 10) {
 		return element;
@@ -29,7 +29,7 @@ const isBigEnough = (element: number, index: number, array: number[]) => {
 let passed: boolean = [12, 5, 6, 130, 44].every(isBigEnough);
 // console.log("Test Value:", passed);
 
-// filter() = method creates a new array with all elements that pass the test implemented by the provided function.
+// filter() = Method creates a new array with all elements that pass the test implemented by the provided function.
 let passedArrayNumbers: number[] = [12, 5, 5, 130, 44].filter(isBigEnough);
 // console.log(passedArrayNumbers);
 
@@ -40,24 +40,29 @@ num.forEach((element) => {
 	// console.log(" element", element * 2);
 });
 
-// indefOf() = method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+// indefOf() = Method returns the first index at which a given element can be found in the array, or -1 if it is not present.
 const number: string = "8";
 let numbers: number = "this is a test search of number 8:".indexOf(number);
 // console.log("index of: ", numbers);
 
-// join() = method joins all the elements of an array into a string
+// join() = Method joins all the elements of an array into a string
 let arr = new Array("First", "Second", "Third");
 let str = arr.join("+");
 // console.log("str", str);
 
-// lastIndexOf() = method returns the last index at which a given element can be found in the array, or -1 if it not present. The array is searched backwards, starting at fromIndex.
+// lastIndexOf() = Method returns the last index at which a given element can be found in the array, or -1 if it not present. The array is searched backwards, starting at fromIndex.
 let index = [12, 5, 8, 130, 55].lastIndexOf(130);
 // console.log("index is:", index)
 
-// map() = method creates a new array with the results of calling a provided function on every element in this array.
+// map() = Method creates a new array with the results of calling a provided function on every element in this array.
 let numbersMap = [1, 4, 9];
 const squareNumber = (number: number) => {
 	return number * number;
 };
 let square = numbersMap.map(squareNumber);
-console.log("roots", square);
+// console.log("roots", square);
+
+// pop() = Method removes the last element from an array and returns that element.
+let numberPop = [1, 5, 9];
+let elementPop = numberPop.pop();
+console.log(elementPop);
