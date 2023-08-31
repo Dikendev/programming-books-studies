@@ -14,3 +14,5 @@ let names: string[] = new Array(namesString);
 for (let i = 0; i < names.length; i++) {
 	console.log(names[i]);
 }
+
+// Concat() = Method returns a new array comprised of this array joined with two or more arrays.
