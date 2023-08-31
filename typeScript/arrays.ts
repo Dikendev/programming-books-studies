@@ -81,4 +81,8 @@ let totalReduce = [0, 1, 2, 3].reduce((a, b) => a + b);
 
 // reduceRight() = Method applies a function simultaneously against two values of the array (from right-to-left) as to reduce it to a single value
 let reduceRight = [0, 1, 2, 3].reduceRight((a, b) => a + b);
-console.log(reduceRight);
+// console.log(reduceRight);
+
+// reverse() = Method reverses the element of an array. The fist array element becomes the last and the last becomes the first.
+let reverseNum = [0, 1, 2, 3, 4].reverse();
+console.log(reverseNum);
