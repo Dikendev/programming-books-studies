@@ -114,5 +114,11 @@ let sorted = arrayToSorted.sort();
 // splice() = Method changes the content of an array, adding new elements while removing old elements.
 let arrToSplice = ["orange", "mango", "banana", "sugar"];
 let removed = arrToSplice.splice(2, 1, "water");
-console.log("adding 1:", arrToSplice);
-console.log("removed 1:", removed);
+// console.log("adding 1:", arrToSplice);
+// console.log("removed 1:", removed);
+
+// toString() = Method returns a string representing the source of the specified array and its elements
+let arrayToString = new Array("orange", "mango", "banana", "sugar");
+console.log(arrayToString);
+let toStr = arrayToString.toString();
+console.log(toStr);
