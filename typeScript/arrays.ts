@@ -92,4 +92,9 @@ const shift = (number: number[]): number | undefined => {
 	return number.shift();
 };
 let numberToShift = [12, 5, 3, 6];
-console.log(shift(numberToShift));
+// console.log(shift(numberToShift));
+
+// slice() = Method extracts a section of an array and returns a new array
+let arrayToSlice = ["orange", "mango", "banana", "sugar", "tea"];
+console.log("arr.slice(1,2):", arrayToSlice.slice(1, 2));
+console.log("arr.slice(1,3):", arrayToSlice.slice(1, 3));
