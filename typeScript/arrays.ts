@@ -76,6 +76,9 @@ for (let i = 0; i < numberToPush.length; i++) {
 // console.log("numbPush:", numbPush);
 
 // reduce() = Method applies a function simultaneously against two values of the array (from left-to-right) as to reduce it to a single value.
-
 let totalReduce = [0, 1, 2, 3].reduce((a, b) => a + b);
 // console.log(totalReduce);
+
+// reduceRight() = Method applies a function simultaneously against two values of the array (from right-to-left) as to reduce it to a single value
+let reduceRight = [0, 1, 2, 3].reduceRight((a, b) => a + b);
+console.log(reduceRight);
