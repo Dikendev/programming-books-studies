@@ -119,6 +119,11 @@ let removed = arrToSplice.splice(2, 1, "water");
 
 // toString() = Method returns a string representing the source of the specified array and its elements
 let arrayToString = new Array("orange", "mango", "banana", "sugar");
-console.log(arrayToString);
+// console.log(arrayToString);
 let toStr = arrayToString.toString();
-console.log(toStr);
+// console.log(toStr);
+
+// unsShift() = Method adds one or more elements to the beginning of an array and returns the new length of the array
+let arrayUnsShift = new Array("orange", "mango", "banana", "sugar");
+let unsShift = arrayUnsShift.unshift("water", "orange");
+console.log("arrayUnsShift", arrayUnsShift);
