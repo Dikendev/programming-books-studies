@@ -13,5 +13,12 @@ const disp = (username: string | string[]) => {
 		}
 	}
 };
+// disp(["mark", "diego"]);
 
-disp(["mark", "diego"]);
+let array: number[] | string[];
+array = [1, 2, 4];
+for (let i = 0; i < array.length; i++) {
+	console.log(array[i]);
+}
+array = ["Mumbai", "Pune", "Delhi"];
+console.log(array);
