@@ -126,4 +126,47 @@ let toStr = arrayToString.toString();
 // unsShift() = Method adds one or more elements to the beginning of an array and returns the new length of the array
 let arrayUnsShift = new Array("orange", "mango", "banana", "sugar");
 let unsShift = arrayUnsShift.unshift("water", "orange");
-console.log("arrayUnsShift", arrayUnsShift);
+// console.log("arrayUnsShift", arrayUnsShift);
+
+// Array Destructuring = Refers to breaking up the structure of an entity. Typescript supports destructuring when used in the context of an array.
+let arrayDes = [
+	{
+		nome: "diego",
+		dados: {
+			endereco: {
+				rua: "rua aqui",
+				numero: "255",
+			},
+			cpf: "000.233.232-11",
+		},
+	},
+	{
+		nome: "cris",
+		dados: {
+			endereco: {
+				rua: "rua lá",
+				numero: "132",
+			},
+			cpf: "223.412.322.12",
+		},
+	},
+];
+
+let [
+	{
+		nome,
+		dados: {
+			endereco: { rua },
+		},
+	},
+] = arrayDes;
+
+let rua2: any = {};
+for (let i = 0; i < arrayDes.length; i++) {
+	let desc = arrayDes[i]["dados"]["endereco"]["rua"];
+	if (!rua2["info"]) {
+		rua2["info"] = desc;
+	}
+	// console.log(desc);
+}
+// console.log("rua2", JSON.stringify(rua2, null, 2));
