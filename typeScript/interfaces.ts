@@ -52,3 +52,15 @@ let option3: RunOptions = {
 
 let fn: any = option3.commandLine;
 console.log(fn());
+
+interface NameList {
+	[index: number]: string;
+}
+// let list1: NameList = ["jon", 1, "bran"]; //Error. 1 is not type string
+
+interface Ages {
+	[index: string]: number;
+}
+let ageList: Ages = {};
+ageList["Diego"] = 15; // Ok
+ageList[2] = "ninve"; // Error
