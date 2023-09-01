@@ -11,7 +11,7 @@ const person: Person = {
 		return "Hi";
 	},
 };
-console.log(person.sayHi());
+// console.log(person.sayHi());
 
 let employee: Person = {
 	firstName: "Diego",
@@ -20,4 +20,35 @@ let employee: Person = {
 		return "Ola";
 	},
 };
-console.log(employee.sayHi());
+// console.log(employee.sayHi());
+
+interface RunOptions {
+	program: string;
+	commandLine: string[] | string | (() => string);
+}
+
+//commandLine = string
+let option1: RunOptions = {
+	program: "test 1",
+	commandLine: "Hello World",
+};
+// console.log(option1.commandLine);
+
+//commandLine = string[]
+let option2: RunOptions = {
+	program: "test 2",
+	commandLine: ["Hello, World"],
+};
+// console.log(option2.commandLine);
+
+//commandLine = function expression
+
+let option3: RunOptions = {
+	program: "test 3",
+	commandLine: (): string => {
+		return "Hello World";
+	},
+};
+
+let fn: any = option3.commandLine;
+console.log(fn());
