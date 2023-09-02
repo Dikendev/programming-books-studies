@@ -77,6 +77,19 @@ let drummer = <Musician>{};
 drummer.age = 27;
 
 drummer.instrument = "Drums";
-console.log(
+/* console.log(
 	`Age is ${drummer.age}, and his instrument is ${drummer.instrument} `
 );
+ */
+
+interface Parent1 {
+	v1: number;
+}
+
+interface Parent2 {
+	v2: number;
+}
+
+interface Child extends Parent1, Parent2 {}
+const obj: Child = { v1: 12, v2: 23 };
+console.log(`Value 1, ${obj.v1}, value ${obj.v2}`);
