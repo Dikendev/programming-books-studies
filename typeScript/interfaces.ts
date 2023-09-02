@@ -51,7 +51,7 @@ let option3: RunOptions = {
 };
 
 let fn: any = option3.commandLine;
-console.log(fn());
+// console.log(fn());
 
 interface NameList {
 	[index: number]: string;
@@ -63,4 +63,20 @@ interface Ages {
 }
 let ageList: Ages = {};
 ageList["Diego"] = 15; // Ok
-ageList[2] = "ninve"; // Error
+// ageList[2] = "ninve"; // Error
+
+interface PersonMusic {
+	age: number;
+}
+
+interface Musician extends PersonMusic {
+	instrument: string;
+}
+let drummer = <Musician>{};
+
+drummer.age = 27;
+
+drummer.instrument = "Drums";
+console.log(
+	`Age is ${drummer.age}, and his instrument is ${drummer.instrument} `
+);
