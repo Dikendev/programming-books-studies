@@ -23,4 +23,11 @@ class StaticMem {
 	}
 }
 StaticMem.num = 12;
-StaticMem.disp();
+// StaticMem.disp();
+
+// instanceof operator: Returns true if the object belongs to the specified type.
+
+class Person {}
+const objPerson = new Person();
+const isPerson = objPerson instanceof Person;
+console.log(`objPerson is an instance of Person ${isPerson}`);
