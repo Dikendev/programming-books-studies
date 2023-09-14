@@ -27,6 +27,7 @@ bin/
 /node_modules
 ### VS Code ###
 .vscode/
+.angular
 
 ### Mac OS ###
 .DS_Store
