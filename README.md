@@ -1,5 +1,5 @@
 <h1 align="center">Programming Books</h1><br>
-<p>Estudos de java, javascript, typescript, e projetos propostos em cada livro.</p>
+<p>Estudos de java, javascript, typescript, angular, e projetos propostos em cada livro.</p>
 <br>
 
 | #   |                                   Livros                                   |           Autor(es)            |
@@ -13,3 +13,5 @@
 | 04  |             [Effective TypeScript](./effective%20typeScript/)              |         Dan Vanderkam.         |
 |     |                                                                            |                                |
 | 05  |         [TypeScript The Complete Beginner's Guide](./typeScript/)          |           Microsoft.           |
+|     |                                                                            |                                |
+| 06  |            [Journey to Angular Development](./journeyAngular/)             |         Sukesh Marla.          |
