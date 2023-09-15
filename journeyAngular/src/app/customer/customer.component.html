@@ -1,0 +1,14 @@
+<h1>Hello From Customer</h1>
+<hr />
+
+<h1>Customer List</h1>
+<table border="1">
+	<tr>
+		<th>FName</th>
+		<th>LName</th>
+	</tr>
+	<tr *ngFor="let item of Customers">
+		<td>{{ item.FName }}</td>
+		<td>{{ item.LName }}</td>
+	</tr>
+</table>
