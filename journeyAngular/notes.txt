@@ -1,0 +1,13 @@
+Directives:
+Three kinds of directives
+1 - Component Directives > AppComponent and CustomerComponents are components directives, also called components. Creating them is like creating a new HTML tag.
+
+2 - Attribute Directives  > The name itself says what it is. It's an attribute. We attach it to other HTML elements or Angular components, and its default behavior will get changed.
+
+3 - Structural Directives > They are attributes too, but they won't change the HTML element or Angular component's default behavior like the directives. Instead, they will change the default structure of that element.
+
+*ngFor > * is an indication that it's a structural directive.
+
+Event Binding:
+Let us bind the control's event in the template to a component class method. That is called Event Binding.
+Event binding also introduces a concept, output property.
