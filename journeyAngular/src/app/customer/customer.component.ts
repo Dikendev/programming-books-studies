@@ -8,7 +8,11 @@ import { Customer } from "./customer";
 export class CustomerComponent {
 	Customers: Array<Customer>;
 	isAddNew: boolean;
+	FirstName: string = "";
+	LastName: string = "";
 	constructor() {
+		this.FirstName;
+		this.LastName;
 		this.isAddNew = false;
 		this.Customers = new Array<Customer>();
 		this.Customers.push(new Customer("Diego", "Kennedy"));
@@ -16,8 +20,10 @@ export class CustomerComponent {
 		this.Customers.push(new Customer("Joy", "dog"));
 	}
 
-	save(): void {
-		this.Customers.push(new Customer("David", "Michel"));
+	Save(): void {
+		if (!this.FirstName || !this.LastName) return;
+		this.Customers.push(new Customer(this.FirstName, this.LastName));
+		this.isAddNew = false;
 	}
 
 	AddNew(): void {
