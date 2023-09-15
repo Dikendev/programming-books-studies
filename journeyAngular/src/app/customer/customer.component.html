@@ -18,8 +18,11 @@
 
 <div [hidden]="!isAddNew">
 	<h1>Add New Customer</h1>
-	Fist Name: <input type="text" name="FName" /> <br />
-	Last Name: <input type="text" name="LName" /> <br /><br />
-	<input type="button" value="Save" (click)="save()" /> &nbsp;
+	Fist Name:
+	<input type="text" name="FName" [(ngModel)]="FirstName" />
+	<br />
+	Last Name: <input type="text" name="LName" [(ngModel)]="LastName" />
+	<br /><br />
+	<input type="button" value="Save" (click)="Save()" /> &nbsp;
 	<input type="button" value="Cancel" (click)="CancelSubmit()" />
 </div>
