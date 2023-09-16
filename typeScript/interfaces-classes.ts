@@ -1,3 +1,4 @@
+export {};
 // Using interfaces for Complex Data structure instead of relying solely on tuples
 interface Point {
 	x: number;

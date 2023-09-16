@@ -16,7 +16,7 @@ export class CustomerComponent {
 		this.isAddNew = false;
 		this.Customers = new Array<Customer>();
 		this.Customers.push(new Customer("Diego", "Kennedy"));
-		this.Customers.push(new Customer("Crbistina", "Freitas"));
+		this.Customers.push(new Customer("Cristina", "Freitas"));
 		this.Customers.push(new Customer("Joy", "dog"));
 	}
 
@@ -26,11 +26,17 @@ export class CustomerComponent {
 		this.isAddNew = false;
 	}
 
+	Reset() {
+		this.FirstName = "";
+		this.LastName = "";
+	}
+
 	AddNew(): void {
 		this.isAddNew = true;
 	}
 
 	CancelSubmit(): void {
 		this.isAddNew = false;
+		this.Reset();
 	}
 }

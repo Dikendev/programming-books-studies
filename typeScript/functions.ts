@@ -1,3 +1,4 @@
+export {};
 function disp_details(id: number, name: string, mail_id?: string) {
 	// console.log("ID:", id);
 	// console.log("Name", name);

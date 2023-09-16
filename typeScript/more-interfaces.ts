@@ -64,3 +64,28 @@ let orderProcessor = new OrderProcessor(mockLibrary.mock<DatabaseService>());
 orderProcessor.process(new Order());
 
 const databseServiceInstance = {} as DatabaseService;
+/**
+ *
+ */
+interface AuthService {
+	isAuthenticated(): boolean;
+}
+
+class Auth {
+	constructor(private srv: AuthService) {}
+
+	execute() {
+		if (this.srv.isAuthenticated()) {
+		} else {
+		}
+	}
+}
+
+class MockAuthService implements AuthService {
+	isAuthenticated(): boolean {
+		return true;
+	}
+}
+
+const srv = new MockAuthService();
+const auth = new Auth(srv);
