@@ -35,3 +35,10 @@ function allAreas<T extends Shape>(...args: T[]): number {
 }
 
 allAreas(new Square(), new Circle());
+
+const square = new Square();
+
+const area = square?.area();
+
+const mySquare = square ?? new Square();
+// now with its support  in components templates
