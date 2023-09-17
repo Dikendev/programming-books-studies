@@ -11,3 +11,11 @@ interface Hero {
 const hero: Partial<Hero> = {
 	name: "Superman",
 };
+
+/**
+ * Record
+ */
+
+interface Hero2 {
+	powers: Record<string, number>;
+}
