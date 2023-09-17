@@ -19,3 +19,8 @@ const hero: Partial<Hero> = {
 interface Hero2 {
 	powers: Record<string, number>;
 }
+
+interface Hero {
+	name: string;
+	powers: number[] | Record<string, number>;
+}
