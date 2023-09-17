@@ -5,6 +5,8 @@
 	<li (click)="selectedProduct = 'Wireless Keyboard'">Wireless Keyboard</li>
 </ul>
 <app-product-detail
+	#product
 	[name]="selectedProduct"
-	(bought)="onBuy()"
+	(bought)="onBuy($event)"
 ></app-product-detail>
+<span> {{ product.name }}</span>
