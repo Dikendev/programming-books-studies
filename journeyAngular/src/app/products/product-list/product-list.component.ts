@@ -7,7 +7,9 @@ import { ProductDetailComponent } from "../product-detail/product-detail.compone
 	styleUrls: ["./product-list.component.css"],
 })
 export class ProductListComponent implements AfterViewInit {
-	selectedProduct: string = "microphone";
+	selectedProduct: string = "";
+
+	products: string[] = ["Webcam", "Microphone", "wireless keyboard"];
 
 	@ViewChild(ProductListComponent) productDetail:
 		| ProductDetailComponent
@@ -15,11 +17,15 @@ export class ProductListComponent implements AfterViewInit {
 
 	ngAfterViewInit(): void {
 		if (this.productDetail) {
-			console.log(this.productDetail.name);
+			console.log(this.productDetail.product);
 		}
 	}
 
-	onBuy(name: string) {
-		window.alert(`You just bought ${name}!`);
+	onBuy(product: string) {
+		window.alert(`You just bought ${product}!`);
+	}
+
+	trackByProducts(index: number, product: string): string {
+		return product;
 	}
 }

@@ -17,32 +17,30 @@ import {
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductDetailComponent implements OnChanges {
-	constructor() {
-		console.log(`Name is ${this.name} in the constructor`);
-	}
+	constructor() {}
 
 	ngOnInit(): void {
-		console.log(`Name is ${this.name} in the ngOnInit`);
+		console.log(`Name is ${this.product} in the ngOnInit`);
 	}
 
 	ngOnChanges(changes: SimpleChanges): void {
-		const product = changes["name"];
+		const product = changes["product"];
 		const oldValue = product.previousValue;
 		const newValue = product.currentValue;
 		console.log(`Product changed from ${oldValue} to ${newValue}`);
 	}
 
-	@Input() name: string = "";
+	@Input() product: string = "";
 
 	// event occur in child, and notify to the parent.
 	@Output() bought = new EventEmitter<string>();
 
 	buy() {
-		this.bought.emit(this.name);
+		this.bought.emit(this.product);
 	}
 
 	get productName(): string {
-		console.log(`Get ${this.name}`);
-		return this.name;
+		console.log(`Get ${this.product}`);
+		return this.product;
 	}
 }
