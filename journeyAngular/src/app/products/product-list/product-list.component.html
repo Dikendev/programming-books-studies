@@ -1,16 +1,14 @@
 <h2>Product List</h2>
+<p>{{ today | date : "fullDate" }}</p>
 <ul>
-	<li
-		*ngFor="let product of products; trackBy: trackByProducts"
-		(click)="selectedProduct = product"
-	>
-		{{ product }}
+	<li *ngFor="let product of products" (click)="selectedProduct = product">
+		{{ product.name | lowercase }}
 	</li>
 </ul>
 <app-product-detail
 	*ngIf="selectedProduct; else noProduct"
 	[product]="selectedProduct"
-	(bought)="onBuy($event)"
+	(bought)="onBuy()"
 ></app-product-detail>
 <ng-template #noProduct>
 	<p>No product selected!</p>
