@@ -5,6 +5,8 @@ import {
 	EventEmitter,
 	ViewEncapsulation,
 	ChangeDetectionStrategy,
+	OnChanges,
+	SimpleChanges,
 } from "@angular/core";
 
 @Component({
@@ -14,7 +16,22 @@ import {
 	encapsulation: ViewEncapsulation.None,
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductDetailComponent {
+export class ProductDetailComponent implements OnChanges {
+	constructor() {
+		console.log(`Name is ${this.name} in the constructor`);
+	}
+
+	ngOnInit(): void {
+		console.log(`Name is ${this.name} in the ngOnInit`);
+	}
+
+	ngOnChanges(changes: SimpleChanges): void {
+		const product = changes["name"];
+		const oldValue = product.previousValue;
+		const newValue = product.currentValue;
+		console.log(`Product changed from ${oldValue} to ${newValue}`);
+	}
+
 	@Input() name: string = "";
 
 	// event occur in child, and notify to the parent.
