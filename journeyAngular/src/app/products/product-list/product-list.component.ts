@@ -29,6 +29,14 @@ export class ProductListComponent implements AfterViewInit {
 		},
 	];
 
+	productsAdding = [
+		...this.products,
+		{
+			name: "Headphones",
+			price: 55,
+		},
+	];
+
 	ngAfterViewInit(): void {
 		if (this.productDetail) {
 			console.log(this.productDetail.product);

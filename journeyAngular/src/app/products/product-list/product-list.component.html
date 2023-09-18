@@ -1,7 +1,10 @@
 <h2>Product List</h2>
 <p>{{ today | date }}</p>
 <ul>
-	<li *ngFor="let product of products" (click)="selectedProduct = product">
+	<li
+		*ngFor="let product of productsAdding | sort"
+		(click)="selectedProduct = product"
+	>
 		{{ product.name | lowercase }}
 	</li>
 </ul>
