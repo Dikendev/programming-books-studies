@@ -18,14 +18,7 @@ import { Product } from "src/app/products/product.interface";
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductDetailComponent implements OnChanges {
-	constructor() {}
-
-	ngOnInit(): void {
-		console.log(`Name is ${this.product?.name} in the ngOnInit`);
-	}
-
 	@Input() product: Product | undefined;
-
 	// event occur in child, and notify to the parent.
 	@Output() bought = new EventEmitter<string>();
 

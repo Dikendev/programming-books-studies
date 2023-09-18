@@ -13,7 +13,9 @@ export class ProductListComponent implements AfterViewInit {
 	@ViewChild(ProductListComponent) productDetail:
 		| ProductDetailComponent
 		| undefined;
+
 	today = new Date();
+
 	products: Product[] = [
 		{
 			name: "Webcam",
