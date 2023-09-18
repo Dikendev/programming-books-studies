@@ -1,5 +1,5 @@
 <h2>Product List</h2>
-<p>{{ today | date : "fullDate" }}</p>
+<p>{{ today | date }}</p>
 <ul>
 	<li *ngFor="let product of products" (click)="selectedProduct = product">
 		{{ product.name | lowercase }}
