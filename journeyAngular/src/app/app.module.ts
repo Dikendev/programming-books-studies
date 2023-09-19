@@ -7,9 +7,10 @@ import { FormsModule } from "@angular/forms";
 import { ProductsModule } from "./products/products.module";
 import { CopyrightDirective } from "./copyright.directive";
 import { NumericDirective } from './numeric.directive';
+import { MaintenanceComponent } from './maintenance/maintenance.component';
 
 @NgModule({
-	declarations: [AppComponent, CopyrightDirective, NumericDirective],
+	declarations: [AppComponent, CopyrightDirective, NumericDirective, MaintenanceComponent],
 	imports: [BrowserModule, AppRoutingModule, FormsModule, ProductsModule],
 	providers: [],
 	bootstrap: [AppComponent],
