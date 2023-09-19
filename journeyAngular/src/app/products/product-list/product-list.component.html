@@ -2,10 +2,10 @@
 <p>{{ today | date }}</p>
 <ul>
 	<li
-		*ngFor="let product of productsAdding | sort"
+		*ngFor="let product of products | sort; let i = index"
 		(click)="selectedProduct = product"
 	>
-		{{ product.name | lowercase }}
+		<app-product-view [id]="i"></app-product-view>
 	</li>
 </ul>
 <app-product-detail
@@ -16,5 +16,5 @@
 <ng-template #noProduct>
 	<p>No product selected!</p>
 </ng-template>
-<h3>Offers</h3>
-<ng-template appProductHost></ng-template>
+<h2>Favorites</h2>
+<app-favorites></app-favorites>
