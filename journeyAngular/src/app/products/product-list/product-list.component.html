@@ -1,20 +1,21 @@
 <h2>Product List</h2>
-<p>{{ today | date }}</p>
 <ul>
 	<li
-		*ngFor="let product of products | sort; let i = index"
+		*ngFor="let product of products | sort"
 		(click)="selectedProduct = product"
 	>
-		<app-product-view [id]="i"></app-product-view>
+		{{ product.name }}
 	</li>
 </ul>
 <app-product-detail
 	*ngIf="selectedProduct; else noProduct"
-	[product]="selectedProduct"
+	[id]="selectedProduct.id"
+	(deleted)="onDelete()"
 	(bought)="onBuy()"
 ></app-product-detail>
 <ng-template #noProduct>
 	<p>No product selected!</p>
 </ng-template>
 <h2>Favorites</h2>
-<app-favorites></app-favorites>
+<!-- <app-favorites></app-favorites> -->
+<app-product-create (added)="onAdd($event)"></app-product-create>
