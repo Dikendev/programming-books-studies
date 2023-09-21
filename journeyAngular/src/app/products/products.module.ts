@@ -5,6 +5,7 @@ import { SortPipe } from "./sort.pipe";
 import { ProductViewComponent } from "./product-view/product-view.component";
 import { ProductCreateComponent } from "./product-create/product-create.component";
 import { ProductListComponent } from "./product-list/product-list.component";
+import { CartComponent } from "../cart/cart.component";
 
 @NgModule({
 	declarations: [
@@ -13,6 +14,7 @@ import { ProductListComponent } from "./product-list/product-list.component";
 		SortPipe,
 		ProductViewComponent,
 		ProductCreateComponent,
+		CartComponent,
 	],
 	imports: [CommonModule],
 	exports: [ProductListComponent],

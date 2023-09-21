@@ -1,0 +1,8 @@
+a {
+	color: #1976d2;
+	text-decoration: none;
+	margin: 5px;
+}
+a:hover {
+	opacity: 0.8;
+}
