@@ -11,7 +11,7 @@ export class ProductViewService {
 
 	getProduct(id: number): Observable<Product> {
 		return this.productService.getProducts().pipe(
-			mergeMap((products) => {
+			switchMap((products) => {
 				if (!this.product) {
 					this.product = products[id];
 				}
