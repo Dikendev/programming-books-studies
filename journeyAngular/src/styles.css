@@ -19,3 +19,7 @@
 .invalid {
 	border-bottom: solid red;
 }
+
+.active {
+	color: firebrick;
+}
