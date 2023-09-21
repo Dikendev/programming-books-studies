@@ -1,11 +1,10 @@
 <div *ngIf="product$ | async as product">
 	<h2>Product Details</h2>
 	<h3>{{ product.name }}</h3>
-	<span>{{ product.price | currency : "EUR" }}</span>
+	<span>{{ product.price }}</span>
 	<input type="text" placeholder="New price" #price />
 	<button (click)="changePrice(product, price.valueAsNumber)">Change</button>
 	<p>
-		{{ product | json }}
 		<button (click)="buy()">Buy Now</button>
 		<button class="delete" (click)="remove(product)">Delete</button>
 	</p>

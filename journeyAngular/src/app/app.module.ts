@@ -4,15 +4,18 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 import { ProductsModule } from "./products/products.module";
-import { CopyrightDirective } from "./copyright.directive";
-import { NumericDirective } from './numeric.directive';
-import { MaintenanceComponent } from './maintenance/maintenance.component';
-import { KeyLoggerComponent } from './key-logger/key-logger.component';
 
 @NgModule({
-	declarations: [AppComponent, CopyrightDirective, NumericDirective, MaintenanceComponent, KeyLoggerComponent],
-	imports: [BrowserModule, AppRoutingModule, FormsModule, ProductsModule],
+	declarations: [AppComponent],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		FormsModule,
+		HttpClientModule,
+		ProductsModule,
+	],
 	providers: [],
 	bootstrap: [AppComponent],
 })
