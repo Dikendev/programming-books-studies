@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
 	selector: "app-maintenance",
@@ -6,7 +7,11 @@ import { Component, OnInit } from "@angular/core";
 	styleUrls: ["./maintenance.component.css"],
 })
 export class MaintenanceComponent implements OnInit {
-	constructor() {}
+	constructor(private router: Router) {}
 
 	ngOnInit(): void {}
+
+	goHome() {
+		this.router.navigate(["/"]);
+	}
 }
