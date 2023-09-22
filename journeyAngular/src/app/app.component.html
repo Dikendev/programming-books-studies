@@ -1,5 +1,7 @@
-<a routerLink="/cart" routerLinkActive="active">Cart</a>
+<a [routerLink]="['/cart']" routerLinkActive="active">Cart</a>
+
+<app-product-list></app-product-list>
+<a [routerLink]="'/about'" routerLinkActive="active">About Us</a>
 <router-outlet></router-outlet>
 
 <p appCopyright></p>
-<app-product-list></app-product-list>

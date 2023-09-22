@@ -6,6 +6,7 @@ import { ProductViewComponent } from "./product-view/product-view.component";
 import { ProductCreateComponent } from "./product-create/product-create.component";
 import { ProductListComponent } from "./product-list/product-list.component";
 import { CartComponent } from "../cart/cart.component";
+import { AppRoutingModule } from "../app-routing.module";
 
 @NgModule({
 	declarations: [
@@ -16,7 +17,7 @@ import { CartComponent } from "../cart/cart.component";
 		ProductCreateComponent,
 		CartComponent,
 	],
-	imports: [CommonModule],
+	imports: [CommonModule, AppRoutingModule],
 	exports: [ProductListComponent],
 })
 export class ProductsModule {}
