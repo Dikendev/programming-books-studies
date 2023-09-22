@@ -1,4 +1,15 @@
-<h2>Product List</h2>
+<ul>
+	<li *ngFor="let product of products | sort">
+		<a [routerLink]="['./', product.id]">
+			{{ product.name }}
+		</a>
+	</li>
+</ul>
+<app-product-create (added)="onAdd($event)"> </app-product-create>
+
+<!-- The product list does not need to keep the selected product in its local state because we are navigating away from the list upon selecting a product. -->
+
+<!-- <h2>Product List</h2>
 <ul>
 	<li
 		*ngFor="let product of products | sort"
@@ -18,5 +29,5 @@
 	<p>No product selected!</p>
 </ng-template>
 <h2>Favorites</h2>
-<!-- <app-favorites></app-favorites> -->
-<app-product-create (added)="onAdd($event)"></app-product-create>
+
+<app-product-create (added)="onAdd($event)"></app-product-create> -->

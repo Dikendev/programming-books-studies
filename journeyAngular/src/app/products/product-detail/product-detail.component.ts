@@ -2,14 +2,15 @@ import {
 	Component,
 	Input,
 	Output,
+	OnInit,
 	EventEmitter,
 	ViewEncapsulation,
 	ChangeDetectionStrategy,
 	OnChanges,
-	SimpleChanges,
 } from "@angular/core";
-import { Observable } from "rxjs";
+import { Observable, of, switchMap } from "rxjs";
 import { Product } from "src/app/products/product.interface";
+import { ActivatedRoute } from "@angular/router";
 import { ProductsService } from "../products.service";
 
 @Component({
@@ -19,8 +20,11 @@ import { ProductsService } from "../products.service";
 	encapsulation: ViewEncapsulation.None,
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductDetailComponent implements OnChanges {
-	constructor(private productsService: ProductsService) {}
+export class ProductDetailComponent implements OnInit, OnChanges {
+	constructor(
+		private productsService: ProductsService,
+		private route: ActivatedRoute
+	) {}
 
 	@Input() id = -1;
 	@Input() product: Product | undefined;
@@ -29,6 +33,12 @@ export class ProductDetailComponent implements OnChanges {
 	@Output() deleted = new EventEmitter<string>();
 	//Observable
 	product$: Observable<Product> | undefined;
+
+	ngOnInit(): void {
+		this.product$ = this.route.data.pipe(
+			switchMap((data) => of(data["product"]))
+		);
+	}
 
 	ngOnChanges(): void {
 		this.product$ = this.productsService.getProduct(this.id);
