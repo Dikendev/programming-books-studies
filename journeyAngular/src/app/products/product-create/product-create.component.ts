@@ -27,6 +27,11 @@ export class ProductCreateComponent {
 		price: new FormControl<number | undefined>(undefined, {
 			nonNullable: true,
 		}),
+		info: new FormGroup({
+			category: new FormControl(""),
+			description: new FormControl(""),
+			image: new FormControl(""),
+		}),
 	});
 
 	get name() {
