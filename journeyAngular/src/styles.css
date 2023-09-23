@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
 .ng-invalid.ng-touched.ng-dirty {
 	border: 1px solid red;
 }
@@ -22,4 +30,10 @@
 
 .active {
 	color: firebrick;
+}
+
+.app-bg-pattern-dotted {
+	background-repeat: repeat;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAKklEQVQoU2NkIBIwEqmOgWyFDQwMDCCMAbCZiFUxLqsxFJPtRpyBQH0TAaqHAwtRB8lvAAAAAElFTkSuQmCC)
+		repeat;
 }
