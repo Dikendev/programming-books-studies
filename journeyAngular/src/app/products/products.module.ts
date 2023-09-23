@@ -7,7 +7,9 @@ import { ProductCreateComponent } from "./product-create/product-create.componen
 import { ProductListComponent } from "./product-list/product-list.component";
 import { CartComponent } from "../cart/cart.component";
 import { AppRoutingModule } from "../app-routing.module";
-
+import { FormsModule } from "@angular/forms";
+import { MaintenanceComponent } from "../maintenance/maintenance.component";
+import { ReactiveFormsModule } from "@angular/forms";
 @NgModule({
 	declarations: [
 		ProductListComponent,
@@ -16,8 +18,10 @@ import { AppRoutingModule } from "../app-routing.module";
 		ProductViewComponent,
 		ProductCreateComponent,
 		CartComponent,
+		MaintenanceComponent,
 	],
-	imports: [CommonModule, AppRoutingModule],
-	exports: [ProductListComponent],
+
+	imports: [CommonModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+	exports: [ProductListComponent, MaintenanceComponent, ProductCreateComponent],
 })
 export class ProductsModule {}
