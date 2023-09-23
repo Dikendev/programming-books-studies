@@ -1,11 +1,11 @@
 <form [formGroup]="productForm" (ngSubmit)="createProduct()">
 	<div>
 		<label for="name">Name</label>
-		<input type="text" id="name" formControlName="name" />
+		<input type="text" id="name" formControlName="name" required="" />
 	</div>
 	<div>
 		<label for="price">Price</label>
-		<input type="number" id="price" formControlName="price" />
+		<input type="number" id="price" formControlName="price" required="" />
 	</div>
 	<div>
 		<button type="submit">Create</button>

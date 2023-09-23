@@ -37,3 +37,15 @@ body {
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAKklEQVQoU2NkIBIwEqmOgWyFDQwMDCCMAbCZiFUxLqsxFJPtRpyBQH0TAaqHAwtRB8lvAAAAAElFTkSuQmCC)
 		repeat;
 }
+
+input.ng-touched {
+	border: 3px solid lightblue;
+}
+
+input.ng-dirty.ng-valid {
+	border: 2px solid green;
+}
+
+input.ng-dirty.ng-invalid {
+	border: 2px solid red;
+}
