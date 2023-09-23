@@ -12,6 +12,7 @@ import { Observable, of, switchMap } from "rxjs";
 import { Product } from "src/app/products/product.interface";
 import { ActivatedRoute } from "@angular/router";
 import { ProductsService } from "../products.service";
+import { CartService } from "src/app/cart/cart.service";
 
 @Component({
 	selector: "app-product-detail",
@@ -23,7 +24,8 @@ import { ProductsService } from "../products.service";
 export class ProductDetailComponent implements OnInit, OnChanges {
 	constructor(
 		private productsService: ProductsService,
-		private route: ActivatedRoute
+		private route: ActivatedRoute,
+		private cartService: CartService
 	) {}
 
 	@Input() id = -1;
@@ -44,8 +46,8 @@ export class ProductDetailComponent implements OnInit, OnChanges {
 		this.product$ = this.productsService.getProduct(this.id);
 	}
 
-	buy() {
-		this.bought.emit();
+	buy(product: Product) {
+		this.cartService.addProduct(product);
 	}
 
 	changePrice(product: Product, price: number) {
