@@ -1,2 +1,14 @@
-<p>ops requested page was not found</p>
-<button (click)="goHome()">Home</button>
+<div class="flex h-full w-full justify-center items-center">
+	<div
+		class="absolute top-0 right-0 left-0 bottom-0 app-bg-pattern-dotted opacity-25 z-0"
+	></div>
+	<div class="flex justify-center flex-col text-center items-center z-10">
+		<img class="w-[20rem]" src="../../assets/svg.png" alt="" />
+		<div class="mb-2 font-bold">Wait</div>
+		<div class="mb-4">We are under schedule maintenance</div>
+		<div class="mb-4" style="max-width: 500px">
+			Sorry for the inconvenience, we will be back shortly!
+		</div>
+		<button class="bg-cyan-500" type="submit">Go back to Home</button>
+	</div>
+</div>
