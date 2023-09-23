@@ -24,8 +24,8 @@ const routes: Routes = [
 		component: ProductDetailComponent,
 		resolve: { product: productDetailResolver },
 	},
-	{ path: "", redirectTo: "/products", pathMatch: "full" },
-	{ path: "**", component: MaintenanceComponent },
+
+	{ path: "oioi", component: MaintenanceComponent },
 ];
 
 @NgModule({
