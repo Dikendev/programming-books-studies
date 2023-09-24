@@ -49,3 +49,6 @@ input.ng-dirty.ng-valid {
 input.ng-dirty.ng-invalid {
 	border: 2px solid red;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
