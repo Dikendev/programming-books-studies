@@ -26,7 +26,6 @@ const routes: Routes = [
 	},
 
 	{ path: "oioi", component: MaintenanceComponent },
-	{ path: "details", component: ProductDetailComponent },
 ];
 
 @NgModule({
