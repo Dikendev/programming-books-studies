@@ -1,7 +1,7 @@
 <div *ngIf="product$ | async as product">
 	<h2>Product Details</h2>
 	<h3>{{ product.name }}</h3>
-	<span>{{ product.price }}</span>
+	<span>{{ product.price | currency : "EUR" }}</span>
 	<form (ngSubmit)="changePrice(product, product.price)">
 		<input
 			type="text"

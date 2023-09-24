@@ -13,6 +13,7 @@
 		<span *ngIf="price.touched && price.hasError('outOfRange')">
 			The price is out of range</span
 		>
+		<span *ngIf="showPriceRangeHint"> Price should be between 1 and 10000</span>
 	</div>
 	<div>
 		<button type="submit" [disabled]="!productForm.valid">Create</button>
