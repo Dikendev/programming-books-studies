@@ -1,8 +1,12 @@
 <form [formGroup]="productForm" (ngSubmit)="createProduct()">
 	<div>
-		<label for="name">Name</label>
-		<input type="text" id="name" formControlName="name" required />
-		<span *ngIf="name.touched && name.invalid">The name is not valid</span>
+		<mat-form-field>
+			<label for="name">Name</label>
+			<input type="text" id="name" formControlName="name" required matInput />
+			<mat-error *ngIf="name.touched && name.invalid"
+				>The name is not valid</mat-error
+			>
+		</mat-form-field>
 	</div>
 	<div>
 		<label for="price">Price</label>
