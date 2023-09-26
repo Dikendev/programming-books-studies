@@ -1,7 +1,12 @@
-<a [routerLink]="['/products']" routerLinkActive="active">Products</a>
-<a [routerLink]="['/cart']" routerLinkActive="active">Cart</a>
-<a [routerLink]="'/about'" routerLinkActive="active">About Us</a>
-<a [routerLink]="'/oioi'" routerLinkActive="active">vai</a>
-<a [routerLink]="['/details']" routerLinkActive="active">Product Details</a>
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+	<span>My e-shop</span>
+	<a [routerLink]="['/products']" routerLinkActive="active">Products</a>
+	<a [routerLink]="['/cart']" routerLinkActive="active">Cart</a>
+	<a [routerLink]="'/about'" routerLinkActive="active">About Us</a>
+	<a [routerLink]="'/oioi'" routerLinkActive="active">vai</a>
+	<a [routerLink]="['/details']" routerLinkActive="active">Product Details</a>
+	<router-outlet></router-outlet>
+</mat-toolbar>
+
 <p appCopyright></p>
+<button mat-button color="primary">I am a Angular Material button</button>
