@@ -7,7 +7,9 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { ProductsModule } from "./products/products.module";
 import { CommonModule } from "@angular/common";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatButtonModule } from "@angular/material/button";
+import { MatToolbarModule } from "@angular/material/toolbar";
 
 @NgModule({
 	declarations: [AppComponent],
@@ -19,7 +21,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		ProductsModule,
 		ReactiveFormsModule,
 		CommonModule,
-  BrowserAnimationsModule,
+		BrowserAnimationsModule,
+		MatButtonModule,
+		MatToolbarModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],
