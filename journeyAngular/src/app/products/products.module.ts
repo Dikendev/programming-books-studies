@@ -10,6 +10,10 @@ import { AppRoutingModule } from "../app-routing.module";
 import { FormsModule } from "@angular/forms";
 import { MaintenanceComponent } from "../maintenance/maintenance.component";
 import { ReactiveFormsModule } from "@angular/forms";
+import { MatButtonModule } from "@angular/material/button";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+
 @NgModule({
 	declarations: [
 		ProductListComponent,
@@ -21,7 +25,15 @@ import { ReactiveFormsModule } from "@angular/forms";
 		MaintenanceComponent,
 	],
 
-	imports: [CommonModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+	imports: [
+		CommonModule,
+		AppRoutingModule,
+		FormsModule,
+		ReactiveFormsModule,
+		MatButtonModule,
+		MatFormFieldModule,
+		MatInputModule,
+	],
 	exports: [ProductListComponent, MaintenanceComponent, ProductCreateComponent],
 })
 export class ProductsModule {}
