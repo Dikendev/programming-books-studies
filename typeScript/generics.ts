@@ -47,9 +47,10 @@ const firstNum = getFirstElement(numbers);
 const string = ["string1", "string2", "string3"];
 const firstString = getFirstElement(string);
 
-function identity<T>(arg: T): T {
+function identity<T>(arg: Array<T>): Array<T> {
+	console.log(arg.length);
 	return arg;
 }
 
-identity<number>(1);
-identity<string>("stringEx");
+identity<number>([1, 2]);
+identity<string>(["2", "3"]);
