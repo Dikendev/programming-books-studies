@@ -36,9 +36,12 @@ function allAreas<T extends Shape>(...args: T[]): number {
 
 allAreas(new Square(), new Circle());
 
-const square = new Square();
+function getFirstElement<T>(array: T[]) {
+	return array[0];
+}
 
-const area = square?.area();
+const numbers = [1, 2, 3];
+const firstNum = getFirstElement(numbers);
 
-const mySquare = square ?? new Square();
-// now with its support  in components templates
+const string = ["string1", "string2", "string3"];
+const firstString = getFirstElement(string);
