@@ -14,6 +14,7 @@ function meth<T>(arg: T[]): T[] {
 interface Shape {
 	area(): number;
 }
+
 class Square implements Shape {
 	area() {
 		return 1;
@@ -45,3 +46,10 @@ const firstNum = getFirstElement(numbers);
 
 const string = ["string1", "string2", "string3"];
 const firstString = getFirstElement(string);
+
+function identity<T>(arg: T): T {
+	return arg;
+}
+
+identity<number>(1);
+identity<string>("stringEx");
