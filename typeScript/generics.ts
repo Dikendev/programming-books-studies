@@ -51,6 +51,11 @@ function identity<T>(arg: Array<T>): Array<T> {
 	console.log(arg.length);
 	return arg;
 }
-
 identity<number>([1, 2]);
 identity<string>(["2", "3"]);
+
+function generics<T>(arg: T): T {
+	return arg;
+}
+
+let myGenerics: <T>(args: T) => T = generics;
