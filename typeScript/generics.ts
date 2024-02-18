@@ -58,4 +58,14 @@ function generics<T>(arg: T): T {
 	return arg;
 }
 
-let myGenerics: <T>(args: T) => T = generics;
+let myGenerics: { <T>(args: T): T } = generics;
+
+interface GenericIdentityFn {
+	<T>(args: T): T;
+}
+
+function genericsIdentity<T>(args: T): T {
+	return args;
+}
+
+let myIdentity: GenericIdentityFn = genericsIdentity;
